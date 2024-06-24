@@ -1,0 +1,9 @@
+﻿# コメント
+ResizedWidth=500
+ResizedHeight=
+Suffix=_s
+OverwriteFlag=true
+ResizeMode=AdjustToWidth
+DefaultInputFolder=C:\input
+OutputFolder=C:\output
+SameAsSrcFolder=true

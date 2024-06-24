@@ -1,0 +1,8 @@
+﻿ResizedWidth=500
+ResizedHeight=300
+Suffix=_s
+OverwriteFlag=True
+ResizeMode=AdjustToWidth
+DefaultInputFolder=C:\input
+OutputFolder=C:\output
+SameAsSrcFolder=True

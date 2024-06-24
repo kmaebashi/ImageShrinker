@@ -1,0 +1,8 @@
+﻿ResizedWidth=
+ResizedHeight=
+Suffix=_s
+OverwriteFlag=False
+ResizeMode=FitIntoRectangle
+DefaultInputFolder=
+OutputFolder=
+SameAsSrcFolder=False

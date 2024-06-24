@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageShrinker", "ImageShrinker\ImageShrinker.csproj", "{EF20A993-043C-4837-A942-03115AAC6786}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageShrinkerTests", "ImageShrinkerTests\ImageShrinkerTests.csproj", "{FAC92A74-0794-4F32-935D-E8BC40DFE94A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF20A993-043C-4837-A942-03115AAC6786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF20A993-043C-4837-A942-03115AAC6786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF20A993-043C-4837-A942-03115AAC6786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF20A993-043C-4837-A942-03115AAC6786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC92A74-0794-4F32-935D-E8BC40DFE94A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC92A74-0794-4F32-935D-E8BC40DFE94A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC92A74-0794-4F32-935D-E8BC40DFE94A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC92A74-0794-4F32-935D-E8BC40DFE94A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8055D193-C2CB-41DB-953F-9436FF0BE0E2}
+	EndGlobalSection
+EndGlobal

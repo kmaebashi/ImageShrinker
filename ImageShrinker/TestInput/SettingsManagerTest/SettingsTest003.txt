@@ -1,0 +1,14 @@
+﻿# コメント
+ResizedWidth=
+ResizedHeight= 
+Suffix=_s # コメント
+OverwriteFlag=false
+ResizeMode=FitIntoRectangle
+
+# Windowsではファイル名に=は使えないが、
+# パーサのテストとして実施しておく
+DefaultInputFolder=a=b
+OutputFolder=
+SameAsSrcFolder=false
+
+
