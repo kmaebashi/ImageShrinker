@@ -216,8 +216,18 @@ namespace ImageShrinker
                 {
                     MessageBox.Show("ファイル" + Path.GetFileName(this.selectedFileNames[i])
                                     + "は既に存在します。処理を中断します。");
+                    break;
                 }
-                htmlSb.Append(convertHtml(this.selectedFileNames[i], suffix, htmlTemplate));
+                try
+                {
+                    htmlSb.Append(convertHtml(this.selectedFileNames[i], suffix, htmlTemplate));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("HTMLテンプレートのフォーマットが不正です。");
+                    Log.Write("HTMLテンプレートのフォーマットが不正です。\r\n" + ex);
+                    break;
+                }
                 this.progressBar.Value = i + 1;
             }
             this.resultHtmlTextBox.Text = htmlSb.ToString();
