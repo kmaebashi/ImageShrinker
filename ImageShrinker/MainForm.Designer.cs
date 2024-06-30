@@ -101,9 +101,9 @@ namespace ImageShrinker
             this.htmlTemplateExplainLabel.AutoSize = true;
             this.htmlTemplateExplainLabel.Location = new System.Drawing.Point(107, 172);
             this.htmlTemplateExplainLabel.Name = "htmlTemplateExplainLabel";
-            this.htmlTemplateExplainLabel.Size = new System.Drawing.Size(330, 12);
+            this.htmlTemplateExplainLabel.Size = new System.Drawing.Size(390, 12);
             this.htmlTemplateExplainLabel.TabIndex = 12;
-            this.htmlTemplateExplainLabel.Text = "{0}..元ファイル名　{1}..縮小後ファイル名　{2}..元ファイル名(拡張子なし)";
+            this.htmlTemplateExplainLabel.Text = "{0}..元ファイル名　{1}..縮小後ファイル名　{2}..元ファイル名(拡張子なし)　{3}..拡張子";
             // 
             // htmlTemplateTextBox
             // 

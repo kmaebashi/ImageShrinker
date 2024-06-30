@@ -172,6 +172,7 @@ namespace ImageShrinker
             {
                 this.outputFolderLabel.Text = this.outputFolderDialog.SelectedPath;
                 this.selectedOutputFolder = this.outputFolderDialog.SelectedPath;
+                this.sameAsSrcFolder.Checked = false;
             }
         }
 
@@ -209,13 +210,23 @@ namespace ImageShrinker
             for (int i = 0; i < this.selectedFileNames.Length; i++)
             {
                 string outputFolder = this.selectedOutputFolder ?? Path.GetDirectoryName(this.selectedFileNames[i]);
-                ResizeImageStatus status
-                    = ImageLogic.ResizeImage(this.selectedFileNames[i], resizedWidth, resizedHeight, this.currentResizeMode, suffix,
-                                       outputFolder, overwriteCheckBox.Checked);
-                if (status == ResizeImageStatus.FileExists)
+                try
                 {
-                    MessageBox.Show("ファイル" + Path.GetFileName(this.selectedFileNames[i])
-                                    + "は既に存在します。処理を中断します。");
+                    ResizeImageStatus status
+                        = ImageLogic.ResizeImage(this.selectedFileNames[i], resizedWidth, resizedHeight, this.currentResizeMode, suffix,
+                                           outputFolder, overwriteCheckBox.Checked);
+                    if (status == ResizeImageStatus.FileExists)
+                    {
+                        string fileName = Path.GetFileNameWithoutExtension(this.selectedFileNames[i])
+                                        + suffix
+                                        + Path.GetExtension(this.selectedFileNames[i]);
+                        MessageBox.Show("ファイル" + fileName + "は既に存在します。処理を中断します。");
+                        break;
+                    }
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("画像のリサイズでエラーが発生しました。\r\n" + ex.Message);
+                    Log.Write("画像のリサイズでエラーが発生しました。\r\n" + ex);
                     break;
                 }
                 try
@@ -238,7 +249,8 @@ namespace ImageShrinker
             string srcFileName = Path.GetFileName(srcPath);
             string destFileName = Path.GetFileNameWithoutExtension(srcPath) + suffix + Path.GetExtension(srcPath);
             string srcFileNameWithoutExtension = Path.GetFileNameWithoutExtension(srcPath);
-            return string.Format(template, srcFileName, destFileName, srcFileNameWithoutExtension);
+            string extension = Path.GetExtension(srcPath);
+            return string.Format(template, srcFileName, destFileName, srcFileNameWithoutExtension, extension);
 
         }
 
