@@ -101,9 +101,9 @@ namespace ImageShrinker
             this.htmlTemplateExplainLabel.AutoSize = true;
             this.htmlTemplateExplainLabel.Location = new System.Drawing.Point(107, 172);
             this.htmlTemplateExplainLabel.Name = "htmlTemplateExplainLabel";
-            this.htmlTemplateExplainLabel.Size = new System.Drawing.Size(390, 12);
+            this.htmlTemplateExplainLabel.Size = new System.Drawing.Size(454, 12);
             this.htmlTemplateExplainLabel.TabIndex = 12;
-            this.htmlTemplateExplainLabel.Text = "{0}..元ファイル名　{1}..縮小後ファイル名　{2}..元ファイル名(拡張子なし)　{3}..拡張子";
+            this.htmlTemplateExplainLabel.Text = "{0}..元ファイル名　{1}..縮小後ファイル名　{2}..元ファイル名(拡張子なし)　{3}..拡張子(ピリオド含む)";
             // 
             // htmlTemplateTextBox
             // 
@@ -200,7 +200,7 @@ namespace ImageShrinker
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(20, 303);
+            this.progressBar.Location = new System.Drawing.Point(12, 324);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(672, 23);
             this.progressBar.TabIndex = 5;
@@ -209,25 +209,27 @@ namespace ImageShrinker
             // 
             this.resizeButton.Location = new System.Drawing.Point(20, 272);
             this.resizeButton.Name = "resizeButton";
-            this.resizeButton.Size = new System.Drawing.Size(75, 23);
+            this.resizeButton.Size = new System.Drawing.Size(149, 46);
             this.resizeButton.TabIndex = 6;
             this.resizeButton.Text = "リサイズ実行";
-            this.resizeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.resizeButton.UseVisualStyleBackColor = true;
             this.resizeButton.Click += new System.EventHandler(this.resizeButton_Click);
             // 
             // resultHtmlTextBox
             // 
-            this.resultHtmlTextBox.Location = new System.Drawing.Point(121, 344);
+            this.resultHtmlTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.resultHtmlTextBox.Location = new System.Drawing.Point(118, 353);
             this.resultHtmlTextBox.Multiline = true;
             this.resultHtmlTextBox.Name = "resultHtmlTextBox";
-            this.resultHtmlTextBox.Size = new System.Drawing.Size(566, 158);
+            this.resultHtmlTextBox.Size = new System.Drawing.Size(566, 167);
             this.resultHtmlTextBox.TabIndex = 7;
             // 
             // resultHtmlLabel
             // 
             this.resultHtmlLabel.AutoSize = true;
-            this.resultHtmlLabel.Location = new System.Drawing.Point(18, 347);
+            this.resultHtmlLabel.Location = new System.Drawing.Point(18, 356);
             this.resultHtmlLabel.Name = "resultHtmlLabel";
             this.resultHtmlLabel.Size = new System.Drawing.Size(65, 12);
             this.resultHtmlLabel.TabIndex = 8;
@@ -268,7 +270,7 @@ namespace ImageShrinker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 514);
+            this.ClientSize = new System.Drawing.Size(709, 532);
             this.Controls.Add(this.sameAsSrcFolder);
             this.Controls.Add(this.outputFolderLabel);
             this.Controls.Add(this.outputFolderChooserButton);
