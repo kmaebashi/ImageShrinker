@@ -173,7 +173,7 @@
     <Content Include="TestInput\SettingsManagerTest\SettingsError102.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TestInput\SettingsManagerTest\SettingsError101 .txt">
+    <Content Include="TestInput\SettingsManagerTest\SettingsError101.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="TestInput\SettingsManagerTest\SettingsTest003.txt">
